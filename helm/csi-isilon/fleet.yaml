@@ -42,6 +42,7 @@ helm:
   valuesFiles:
     - k8s-1.21-values.yaml
     - driver-image.yaml
+    - values.yaml
   # Allow to use values files from configmaps or secrets
 #  valuesFrom:
  # - configMapKeyRef:
