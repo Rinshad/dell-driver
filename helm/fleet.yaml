@@ -3,12 +3,12 @@
 # provide the default value of the namespace field if one is not specified
 # in the manifests.
 # Default: default
-defaultNamespace: default
+defaultNamespace: isilon
 
 # All resources will be assigned to this namespace and if any cluster scoped
 # resource exists the deployment will fail.
 # Default: ""
-namespace: default
+namespace: isilon
 
 #kustomize:
   # Use a custom folder for kustomize resources. This folder must contain
@@ -61,7 +61,7 @@ helm:
 # as OutOfSync. One can then manually confirm that a bundle should be deployed to
 # the downstream clusters.
 # Default: false
-paused: false
+#paused: false
 
 rolloutStrategy:
     # A number or percentage of clusters that can be unavailable during an update
@@ -103,7 +103,7 @@ rolloutStrategy:
 targetCustomizations:
 # The name of target. If not specified a default name of the format "target000"
 # will be used. This value is mostly for display
-- name: prod
+#- name: prod
   # Custom namespace value overriding the value at the root
   namespace: isilon
   # Custom kustomize options overriding the options at the root
@@ -136,7 +136,7 @@ targetCustomizations:
 
 # dependsOn allows you to configure dependencies to other bundles. The current bundle
 # will only be deployed, after all dependencies are deployed and in a Ready state.
-dependsOn:
+#dependsOn:
   # Format: <GITREPO-NAME>-<BUNDLE_PATH> with all path separators replaced by "-" 
   # Example: GitRepo name "one", Bundle path "/multi-cluster/hello-world" => "one-multi-cluster-hello-world"
   #- name: one-multi-cluster-hello-world
